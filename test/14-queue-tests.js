@@ -14,7 +14,6 @@ describe('14-queue', () => {
   afterEach(() => {
     sandbox.restore();
   });
-
   it.optional('should create a Queue with the methods', () => {
     const queue = new Queue();
     assert.doesNotThrow(() => queue.enqueue(5));
@@ -23,7 +22,6 @@ describe('14-queue', () => {
     assert.strictEqual(queue.dequeue(), 5);
     assert.strictEqual(queue.dequeue(), 6);
   });
-
   it.optional('should use a ListNode within the methods', () => {
     const queue = new Queue();
     assert.doesNotThrow(() => queue.enqueue(5));
